@@ -23,8 +23,8 @@ export ELTON_OPTS=""
 
 
 export NOMER_VERSION=0.2.2
-export NOMER_DATA_REPO_MAIN="https://raw.githubusercontent.com/${REPO_NAME}/main"
-export NOMER_JAR="$PWD/elton.jar"
+export NOMER_DATA_REPO_MAIN="https://raw.githubusercontent.com/globalbioticinteractions/nomer/main"
+export NOMER_JAR="$PWD/nomer.jar"
 
 export REVIEW_REPO_HOST="blob.globalbioticinteractions.org"
 export README=$(mktemp)
