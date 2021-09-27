@@ -208,7 +208,7 @@ cat indexed-names.tsv.gz | gunzip | tsv2csv | gzip > indexed-names.csv.gz
 cat indexed-names.tsv.gz | gunzip | head -n501 > indexed-names-sample.tsv
 cat indexed-names-sample.tsv | tsv2csv > indexed-names-sample.csv
 
-cat indexed-names.tsv.gz | tail -n+2 | cut -f1,2 | ${NOMER_CMD} append discoverlife-taxon | grep -v NONE | cut -f4,5 | sort | uniq | gzip > apoidea-names.tsv.gz
+cat indexed-names.tsv.gz | gunzip | tail -n+2 | cut -f1,2 | ${NOMER_CMD} append discoverlife-taxon | grep -v NONE | cut -f4,5 | sort | uniq | gzip > apoidea-names.tsv.gz
 
 NUMBER_OF_APOIDAE_NAMES=$(cat apoidea-names.tsv.gz | gunzip | sort | uniq | wc -l)
  echo -e "\n[${REPO_NAME}] has ${NUMBER_OF_APOIDAE_NAMES} Apoidea names, including:" | tee_readme
